@@ -1,0 +1,83 @@
+.fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+    color: black !important;
+}
+
+@media (min-width: 992px){
+.nav-link{
+    color: white !important;
+    font-size: 1em;
+}
+}
+
+
+
+
+@media (min-width: 992px) {
+    .nav-item{
+        padding-top: 45px;
+        padding-bottom: 45px;
+        padding-left: 15px;
+        padding-right: 15px;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.nav-item:active{
+    outline: none;
+}
+
+.nav-item:hover{
+    background-color: rgba(102, 102, 102, 0.15);
+    color: white !important;
+}
+
+.nav-link.scrolled{
+    color: #5d4267 !important;
+}
+
+.active{
+    font-weight: 700;
+}
+
+
+@media (max-width: 992px) {
+    .logo{
+        max-height: 85px;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        margin-left: 1em;
+    }
+}
+
+@media (min-width: 992px){
+    .logo{
+        max-height: 85px;
+        margin-left: 2.5em;
+    }
+}
+
+.nav-colored {
+    background-color:#000;
+}
+
+.nav-transparent {
+    background-color:transparent;
+}
+
+.dropdown-menu{
+    background-color: white !important;
+}
+
+.dropdown-item:hover{
+    background: linear-gradient(108deg, rgba(57,80,161,1) 0%, rgba(63,111,167,1) 49%) !important;
+}
