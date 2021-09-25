@@ -40,5 +40,44 @@ export class HomeComponent implements OnInit {
       console.log(this.itemsList[0].name)
     });
   }
+  /*
+  createItem(){
+    var first= new Item;
+    first = {
+      id: "",
+      name : "prout",
+      price : 200,
+      description : "salut",
+      quantity : [100,200],
+    }
+    console.log("gngngn");
+    this.firebaseService.createItem(first);
+    console.log("gngngn");
+  }
+  
+  updateItem(){
+    var first= new Item;
+    first = {
+      id : "bFlOoBSU1fqOa7WdgaTC",
+      name : "proutzor",
+      price : 200,
+      description : "salut",
+      quantity : [100,200],
+    }
+    this.firebaseService.updateItem(first);
+  }
+
+  deleteItem(){
+    var first= new Item;
+    first = {
+      id : "bFlOoBSU1fqOa7WdgaTC",
+      name : "proutzor",
+      price : 200,
+      description : "salut",
+      quantity : [100,200],
+    }
+    this.firebaseService.deleteItem(first);
+  }*/
+
 
 }
