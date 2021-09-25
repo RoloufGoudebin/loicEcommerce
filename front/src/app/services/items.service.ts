@@ -3,13 +3,18 @@ import { FormControl, FormGroup } from "@angular/forms";
 
 
 import { Item } from '../models/item.model'
+import { FirebaseService } from './firebase.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsService {
 
-  constructor() { }
+  constructor(private firebaseService: FirebaseService) { }
+
+  createItem(data: any){
+    this.firebaseService.createItem(data);
+  }
 
   form = new FormGroup({
     name: new FormControl(''),

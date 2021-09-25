@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="col-6">
+        <form [formGroup]="this.collectionsService.form" (ngSubmit)="onSubmit()">
+            <input placeholder="Nom du produit" formControlName="name" type="text" class="input-field col s12">
+            <input placeholder="Description" formControlName="description" type="text" class="input-field col s12">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

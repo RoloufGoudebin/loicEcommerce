@@ -10,7 +10,7 @@ import { Item } from 'src/app/models/item.model';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(public itemsService: ItemsService, private firebaseService: FirebaseService) {
+  constructor(public itemsService: ItemsService) {
 
    }
 
@@ -26,7 +26,7 @@ export class CreateComponent implements OnInit {
       quantity: this.itemsService.form.value.quantity,
       collection: this.itemsService.form.value.collection
     }
-    this.firebaseService.createItem(toAdd)
+    this.itemsService.createItem(toAdd)
   }
 
 
