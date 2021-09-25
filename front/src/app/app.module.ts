@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,7 @@ import { AngularFireModule } from '@angular/fire/compat/';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 
-import { environment } from 'src/environments/environment'
+import { environment } from 'src/environments/environment';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent }
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [
     MDBSpinningPreloader,

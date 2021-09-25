@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   itemsList: Item[];
   categorieslist: Category[];
+  toCreate: Item
 
 
   constructor(private firebaseService: FirebaseService) {
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getItemsList();
-    //this.getCategoriesList();
+
   }
 
   
