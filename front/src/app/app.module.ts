@@ -12,10 +12,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { AngularFireModule } from '@angular/fire/compat/';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+
+import { environment } from 'src/environments/environment'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent }
-
 ]
 
 @NgModule({
@@ -29,7 +33,10 @@ const appRoutes: Routes = [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule
+    NgbModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   providers: [
     MDBSpinningPreloader,

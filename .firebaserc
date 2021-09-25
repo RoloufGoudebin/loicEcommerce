@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "loicecommerce-87dcf": {
+      "hosting": {
+        "loicEcommerce": [
+          "loicecommerce-87dcf"
+        ]
+      }
+    }
+  }
+}
