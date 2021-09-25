@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar white-text my-0 py-0 mx-0 mx-0">
+    <a class="navbar-brand my-0 py-0" routerLinkActive="active" routerLink="/"><img class="logo"
+            src='assets/img/logo.gif'></a>
+    <button class="navbar-toggler my-0 py-0" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class='navbar navbar-collapse mr-xl-5 my-0 py-0' [ngbCollapse]="isNavbarCollapsed" id="navbarCollapse">
+        <ul class="navbar-nav ml-md-auto my-0 py-0 text-center">
+            <div *ngFor="let navLink of navLinks">
+                <li class="nav-item" routerLinkActive="active"
+                    routerLink="{{navLink.link}}" [routerLinkActiveOptions]="{ exact: true }" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+                    <a class="nav-link py-0">{{navLink.title}}</a>
+                </li>
+            </div>
+        </ul>
+    </div>
+</nav>
