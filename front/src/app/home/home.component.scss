@@ -29,12 +29,27 @@ position: absolute;
 }
 
 
-.LN {
-    background-image: url (".../assets/img/LN.jpg");
-    background-repeat: no-repeat;
-    background-size: 40em;
+.ln {
+  position: absolute;
+  margin-top: 11em;
+  margin-left: 13em;;
+    z-index: 2;
 }
 
 .space-card{
     margin-top: 9em;
+}
+
+button {
+    margin-top: 10em;
+    position: relative;
+}
+
+
+.shopnow {
+    margin-top: 25em;
+    margin-left: 13em;
+    position: absolute;
+    border: white;
+    z-index: 3;
 }
