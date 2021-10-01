@@ -9,20 +9,10 @@ export class NavbarComponent implements OnInit {
 
   navLinks = [
     { title: "Home", link: "/", dropdown: false },
-    { title: "Tarifs", link: "/tarifs", dropdown: false },
-    {
-      title: "Nos activités", link: "/activites", dropdown: true,
-      navs:
-        [
-          { title: "Contrôles", link: "/activites/controles" },
-          { title: "Consultance", link: "/activites/consultance" },
-          { title: "Coordination", link: "/activites/coordination" }
-        ]
-    },
-    { title: "Formations", link: "/formations", dropdown: false },
-    { title: "Liens", link: "/liens", dropdown: false },
-    { title: "Blog", link: "/blog", dropdown: false },
-    { title: "Contact", link: "/contact", dropdown: false }
+    { title: "Collections", link: "/formations", dropdown: false },
+    { title: "Phantomania x Loic", link: "/blog", dropdown: false },
+    { title: "Mon compte", link: "/liens", dropdown: false },
+    { title: "Mon panier", link: "/blog", dropdown: false },
   ]
 
   constructor() { }
