@@ -1,9 +1,13 @@
-h4 {
+ h4 {
 margin-left: 1.5em;
 margin-top: 0.4em;
 font-size: 1em;
 color: black;
 font-weight: 450;
+}
+
+h5{
+    font-size: 0.8em ;
 }
 
 H6 {
@@ -16,16 +20,16 @@ color: gray;}
 
 
 
-black{
+.black{
     background-color: black;
 }
 
 .bg {
     background-color:white;
-    padding-right: 16em;
+    padding-right: 5em;
     border-radius: 0 45px 0 0;
-    margin-top: -6em;
-position: absolute;
+    margin-top: -5em;
+    position: relative;
 }
 
 .marge
@@ -35,46 +39,59 @@ position: absolute;
 /*banner phantomania + banner fixe LN-Shop now*/ 
 .ln {
   position: absolute;
-  margin-top: 11em;
-  margin-left: 13em;;
-    z-index: 2;
+  margin-left: 16em;
+  margin-top: 13em;
+  z-index: 2;
+  max-width: 30%;
 }
 
 
 .shopnow {
     margin-top: 23em;
-    margin-left: 15.2em;
+    margin-left: 16em;
     position: absolute;
-    border: white;
+    border: white;  
     z-index: 3;
 }
 .fleche {
-    margin-top: 23.25em;
-    margin-left: 15em;
+    margin-top: 23.5em;
+    margin-left: 16em;
     position: absolute;
     border: white;
     z-index: 3;
 }
 
 .phantomania {
-    margin-left: 72.1em;
-    margin-top: 14.8em;
+    margin-left: 67em;
+    margin-top:15em;
     position: absolute;
+    width:14%;
+    width: 20%;
     z-index:5;
 }
 
 .code {
-    margin-left: 69em;
+    margin-left: 63em;
     margin-top: 15em;
     position: absolute;
     border-radius: 10px;
+    max-width: 40%;
     z-index:4;
 }
 
 .cirque {
     color: white;
-    margin-left: 73em;
-    margin-top: 21.5em;
+    margin-left: 66.5em;
+    margin-top: 20em;
     position: absolute;
     z-index:5;
+}
+
+.black{
+    background-color: black;
+}
+
+.cardsize{
+    max-width: 20%;
+
 }
