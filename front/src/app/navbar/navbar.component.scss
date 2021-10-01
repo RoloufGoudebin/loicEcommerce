@@ -6,7 +6,7 @@
 
 @media (min-width: 992px){
 .nav-link{
-    color: white !important;
+    color: black !important;
     font-size: 1em;
 }
 }
@@ -52,17 +52,19 @@
 
 @media (max-width: 992px) {
     .logo{
-        max-height: 85px;
+        max-height: 75px;
         padding-top: 0.6em;
         padding-bottom: 0.6em;
         margin-left: 1em;
+        border-radius: 60%;
     }
 }
 
 @media (min-width: 992px){
     .logo{
-        max-height: 85px;
+        max-height: 75px;
         margin-left: 2.5em;
+        border-radius: 37.5px;
     }
 }
 
