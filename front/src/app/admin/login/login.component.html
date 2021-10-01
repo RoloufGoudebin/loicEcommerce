@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="col-6">
+        <form [formGroup]="this.authService.formLogin" (ngSubmit)="onSubmit()">
+            <input placeholder="email" formControlName="email" type="text" class="input-field col s12">
+            <input placeholder="password" formControlName="password" type="password" class="input-field col s12">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

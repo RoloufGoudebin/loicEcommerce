@@ -16,37 +16,61 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from '@angular/fire/compat/';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 
-import { AdminModule } from './admin/admin.module';
+import firebase from 'firebase/compat/app';
+
+
+
+import { AuthService } from './services/auth.service';
 
 import { environment } from 'src/environments/environment';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './admin/login/login.component';
+import { ItemsComponent } from './admin/items/items.component';
+import { CollectionsComponent } from './admin/collections/collections.component';
+import { CreateComponent as CreateItems } from './admin/items/create/create.component';
+import { CreateComponent as CreateCollection} from './admin/collections/create/create.component'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent }
 ]
 
+firebase.initializeApp(environment.firebaseConfig);
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminComponent,
+    LoginComponent,
+    ItemsComponent,
+    CollectionsComponent,
+    HomeComponent,
+    CreateItems,
+    CreateCollection
+
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     MDBBootstrapModulesPro.forRoot(),
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
+    AngularFireAuthModule,
     ReactiveFormsModule,
-    FormsModule,
-    AdminModule
+    FormsModule
+  ],
+  bootstrap:[
+    AppComponent
   ],
   providers: [
     MDBSpinningPreloader,
-  ],
-  bootstrap: [AppComponent]
+    AuthService
+  ]
 })
 export class AppModule { }
