@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire/compat/';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 import firebase from 'firebase/compat/app';
 
@@ -63,7 +64,8 @@ firebase.initializeApp(environment.firebaseConfig);
     AngularFirestoreModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularFireStorageModule
   ],
   bootstrap:[
     AppComponent

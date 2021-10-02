@@ -6,6 +6,7 @@
             <input placeholder="Quantité" formControlName="quantity" type="number" class="input-field col s12">
             <input placeholder="Prix" formControlName="price" type="number" class="input-field col s12">
             <input placeholder="Collection" formControlName="collection" type="text" class="input-field col s12">
+            <input type="file" (change)="uploadFileExplore($event)" mutiple>
             <button type="submit">Submit</button>
         </form>
     </div>

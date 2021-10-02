@@ -5,13 +5,19 @@ import { HomeComponent } from './admin/home/home.component';
 import { CreateComponent as CreateItem } from './admin/items/create/create.component';
 import { ItemsComponent } from './admin/items/items.component';
 import { CreateComponent as CreateCollection } from './admin/collections/create/create.component';
-import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
+import { AngularFireAuthGuard, hasCustomClaim, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/compat/auth-guard';
 import { LoginComponent } from './admin/login/login.component';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectLoggedInToDashboard = () => redirectLoggedInTo(['admin']);
+
 
 
 const routes: Routes = [
   //section admin
-  {path:"admin", children: [
+  {path:"login", component: LoginComponent, data: { authGardPipe: redirectLoggedInToDashboard}},
+  {path:"admin", canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin },
+  children: [
     { path:"", component: LoginComponent },
     //subsection items
     { path:"items", children: [
