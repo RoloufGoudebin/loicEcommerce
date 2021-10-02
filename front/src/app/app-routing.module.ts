@@ -17,8 +17,8 @@ const redirectLoggedInToDashboard = () => redirectLoggedInTo(['admin']);
 const routes: Routes = [
   //section admin
   {path:"", component: HomeComponent, pathMatch: 'full'},
-  {path:"login", component: LoginComponent, data: { authGardPipe: redirectLoggedInToDashboard}},
-  {path:"admin", canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin },
+  {path:"login", component: LoginComponent},
+  {path:"admin",
   children: [
     { path:"", component: LoginComponent },
     //subsection items
