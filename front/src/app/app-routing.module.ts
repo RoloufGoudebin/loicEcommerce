@@ -17,8 +17,8 @@ const redirectLoggedInToDashboard = () => redirectLoggedInTo(['admin']);
 const routes: Routes = [
   //section admin
   {path:"", component: HomeComponent, pathMatch: 'full'},
-  {path:"login", component: LoginComponent},
-  {path:"admin",
+  {path:"login", component: LoginComponent, data: { authGardPipe: redirectLoggedInToDashboard}},
+  {path:"admin", canActivate: [AngularFireAuthGuard],
   children: [
     { path:"", component: LoginComponent },
     //subsection items
@@ -36,7 +36,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled'
 })],
   exports: [RouterModule]
 })
