@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 import { FirebaseService } from './firebase.service';
 
 @Injectable({

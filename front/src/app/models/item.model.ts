@@ -1,5 +1,5 @@
 import { Category } from "./category.model";
-import { SizeQuantity } from "./sizeQuantity.models";
+import { SizeQuantity } from "./sizeQuantity.model";
 
 export class Item {
     name: string;
