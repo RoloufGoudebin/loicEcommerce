@@ -17,6 +17,7 @@ export class ItemsService {
   }
 
   form = new FormGroup({
+    category: new FormControl(''),
     name: new FormControl(''),
     price: new FormControl(''),
     description: new FormControl(''),

@@ -89,8 +89,8 @@ export class FirebaseService {
     });
   }
 
-  getCategory(){
-    return this.firestore.collection("category").snapshotChanges();
+  getCategories(){
+    return this.firestore.collection("categories").snapshotChanges();
   }
 
   updateCategory(data: any){

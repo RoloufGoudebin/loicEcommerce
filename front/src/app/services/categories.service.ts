@@ -18,7 +18,7 @@ export class CategoriesService {
     this.firebaseService.createCategory(data);
   }
 
-  getCollections(){
-    return this.firebaseService.getCategory()
+  getCategories(){
+    return this.firebaseService.getCategories();
   }
 }
