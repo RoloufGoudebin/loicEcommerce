@@ -2,24 +2,23 @@ import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from "@angular/forms";
 import { FirebaseService } from './firebase.service';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class CollectionsService {
+export class CategoriesService {
 
   constructor(private firebaseService: FirebaseService) { }
 
   form = new FormGroup({
-    name: new FormControl(''),
-    description: new FormControl(''),
+    name: new FormControl('')
   })
 
-  createCollection(data: any){
-    this.firebaseService.createCollection(data);
+  createCategory(data: any){
+    this.firebaseService.createCategory(data);
   }
 
   getCollections(){
-    return this.firebaseService.getCollections()
+    return this.firebaseService.getCategory()
   }
-
 }

@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="col-6">
+        <form [formGroup]="this.categoriesService.form" (ngSubmit)="onSubmit()">
+            <input placeholder="Nom de la catégorie " formControlName="name" type="text" class="input-field col s12">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

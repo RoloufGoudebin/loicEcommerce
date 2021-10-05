@@ -67,7 +67,7 @@ export class FirebaseService {
       .set(data);
   }
 
-  deleteCollections(data: any) {
+  deleteCollection(data: any) {
     return this.firestore
        .collection("collections")
        .doc(data.id)
@@ -75,5 +75,36 @@ export class FirebaseService {
   }
 
   /*=====================================================================*/
+
+  /*
+  CRUD pour la collection "collections"
+  */
+
+  createCategory(data:any) {
+    return new Promise<any>((resolve, reject) => {
+      this.firestore
+        .collection("categories")
+        .add(data)
+        .then(res => { }, err => reject(err));
+    });
+  }
+
+  getCategory(){
+    return this.firestore.collection("category").snapshotChanges();
+  }
+
+  updateCategory(data: any){
+    return this.firestore
+      .collection("categories")
+      .doc(data.id)
+      .set(data);
+  }
+
+  deleteCategory(data: any){
+    return this.firestore
+      .collection("categories")
+      .doc(data.id)
+      .delete();
+  }
 
 }
