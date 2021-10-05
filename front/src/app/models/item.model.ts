@@ -1,6 +1,5 @@
-import { Category } from "./category.model";
-
 export class Item {
+    category: string;
     name: string;
     price: number;
     description: string;
