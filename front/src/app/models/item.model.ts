@@ -3,7 +3,8 @@ export class Item {
     name: string;
     price: number;
     description: string;
-    quantity: number[];
+    sizes: string[];
+    sizesQty: number[];
     collection: string;
     img: string;
 }

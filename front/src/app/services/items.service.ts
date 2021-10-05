@@ -22,6 +22,8 @@ export class ItemsService {
     price: new FormControl(''),
     description: new FormControl(''),
     quantity: new FormControl(''),
+    size: new FormControl(''),
+    sizeQty: new FormControl(''),
     collection: new FormControl('')
   })
 
