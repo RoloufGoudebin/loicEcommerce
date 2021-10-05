@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Item } from '../models/item.model';
 
 @Injectable({
   providedIn: 'root'

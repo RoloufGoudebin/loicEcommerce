@@ -1,21 +1,28 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import firebase from "firebase/compat/app";
-import { AngularFireAuth } from "@angular/fire/compat/auth";
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
   formLogin = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
   })
 
+  
+
   login(email: string, password: string) {
     firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(value => {
+      console.log('Nice, it worked!');
+      this.router.navigateByUrl('/admin');
+    })
       .catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -25,7 +32,6 @@ export class AuthService {
         } else {
           alert(errorMessage);
         }
-        console.log(error);
       });
   }
 

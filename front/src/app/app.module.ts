@@ -31,7 +31,9 @@ import { LoginComponent } from './admin/login/login.component';
 import { ItemsComponent } from './admin/items/items.component';
 import { CollectionsComponent } from './admin/collections/collections.component';
 import { CreateComponent as CreateItems } from './admin/items/create/create.component';
-import { CreateComponent as CreateCollection} from './admin/collections/create/create.component'
+import { CreateComponent as CreateCollection} from './admin/collections/create/create.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { CommandesComponent } from './admin/commandes/commandes.component'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent }
@@ -50,7 +52,9 @@ firebase.initializeApp(environment.firebaseConfig);
     CollectionsComponent,
     HomeComponent,
     CreateItems,
-    CreateCollection
+    CreateCollection,
+    DashboardComponent,
+    CommandesComponent
 
   ],
   imports: [

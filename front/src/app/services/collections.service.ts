@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from "@angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
+import { Collection } from '../models/collection.model';
 import { FirebaseService } from './firebase.service';
 
 @Injectable({
@@ -17,6 +18,10 @@ export class CollectionsService {
 
   createCollection(data: any){
     this.firebaseService.createCollection(data);
+  }
+
+  getCollections(){
+    return this.firebaseService.getCollections()
   }
 
 }

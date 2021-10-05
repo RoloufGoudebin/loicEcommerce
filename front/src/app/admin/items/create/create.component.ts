@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemsService } from 'src/app/services/items.service';
-import { FirebaseService } from 'src/app/services/firebase.service';
 import { Item } from 'src/app/models/item.model';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-create',
@@ -11,11 +12,17 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(public itemsService: ItemsService, private storage: AngularFireStorage) {
+  uploadPercent: Observable<number | undefined>;
+  profileUrl: Observable<string | null>;
+  num: number;
 
+  constructor(public itemsService: ItemsService, private storage: AngularFireStorage) {
   }
 
   ngOnInit(): void {
+    this.num = 0;
+    const ref = this.storage.ref('items/Casquette');
+    this.profileUrl = ref.getDownloadURL();
   }
 
   onSubmit() {
@@ -25,17 +32,18 @@ export class CreateComponent implements OnInit {
       price: this.itemsService.form.value.price,
       description: this.itemsService.form.value.description,
       quantity: this.itemsService.form.value.quantity,
-      collection: this.itemsService.form.value.collection
+      collection: this.itemsService.form.value.collection,
+      img: "items/" + this.itemsService.form.value.name + "/0"
     }
-    this.itemsService.createItem(toAdd)
+    this.itemsService.createItem(toAdd);
   }
 
   uploadFileExplore(event: any) {
     const file = event.target.files[0];
-    const filePath = 'name-your-file-path-here';
+    const filePath = 'items/' + this.itemsService.form.value.name + "/" + this.num;
     const task = this.storage.upload(filePath, file);
+    this.num = this.num + 1;
+    console.log(this.num);
+    this.uploadPercent = task.percentageChanges();
   }
-
-
-
 }

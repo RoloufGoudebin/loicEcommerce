@@ -7,4 +7,5 @@ export class Item {
     description: string;
     quantity: number[];
     collection: string;
+    img: string;
 }
