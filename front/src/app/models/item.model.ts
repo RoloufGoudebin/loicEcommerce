@@ -1,10 +1,10 @@
-import { Category } from "./category.model";
-import { SizeQuantity } from "./sizeQuantity.model";
-
 export class Item {
+    category: string;
     name: string;
     price: number;
     description: string;
-    quantity: number[];
+    sizes: string[];
+    sizesQty: number[];
     collection: string;
+    img: string;
 }

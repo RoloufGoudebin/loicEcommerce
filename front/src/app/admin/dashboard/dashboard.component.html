@@ -1,0 +1,39 @@
+<div class="container">
+    <!--Section: Features v.1-->
+    <section class="text-center">
+
+        <!--Section heading-->
+        <h2 class="h1 py-5 font-weight-bold">Admin Dashboard</h2>
+        <!--Section description-->
+        <p class="px-5 mb-5 pb-3 lead grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam.</p>
+
+        <!--Grid row-->
+        <div class="row">
+
+            <mdb-card *ngFor="let card of cards" class="col-3">
+                <!--Card image-->
+                <mdb-card-img src=""
+                    alt="Card image cap"></mdb-card-img>
+                <!--Card content-->
+                <mdb-card-body>
+
+                    <!--Title-->
+                    <mdb-card-title>
+                        <h4>{{card.title}}</h4>
+                    </mdb-card-title>
+
+                    <!--Text-->
+                    <mdb-card-text>{{card.description}}</mdb-card-text>
+                    <a routerLinkActive="active" routerLink="{{card.link}}" [routerLinkActiveOptions]="{ exact: true }"mdbBtn color="primary" mdbWavesEffect>Voir</a>
+                </mdb-card-body>
+            </mdb-card>
+
+        </div>
+        <!--Grid row-->
+
+    </section>
+    <!--Section: Features v.1-->
+</div>
