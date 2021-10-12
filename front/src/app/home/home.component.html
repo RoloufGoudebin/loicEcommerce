@@ -1,41 +1,45 @@
 <app-navbar></app-navbar>
 <div class="container-fluid">
   <div class="col-sm-6">
-<!--Logo LN & shop now-->
-<div><img class="col-sm-3 ln" src="../assets/img/LN.jpg" alt="Loic Nottet, le store en ligne"> </div>
+    <!--Logo LN & shop now-->
+    <div><img class="col-sm-3 ln" src="../assets/img/LN.jpg" alt="Loic Nottet, le store en ligne"> </div>
 
-<!--Phantomania code bar & titre-->
-<div><img class ="col-sm-6 phantomania" src="../assets/img/Image-35.png" alt="Phantomania, le spectacle exclusif"> </div>
+    <!--Phantomania code bar & titre-->
+    <div><img class="col-sm-6 phantomania" src="../assets/img/Image-35.png" alt="Phantomania, le spectacle exclusif">
+    </div>
 
-<div><img class ="col-sm-6 code" src="../assets/img/Image-28.jpg"  alt="Phantomania, le spectacle exclusif"> </div>
-<div class="col">
-  <mdb-icon fas icon="arrow-circle-right " size="1x" class="black-text fleche"> </mdb-icon>  
+    <div><img class="col-sm-6 code" src="../assets/img/Image-28.jpg" alt="Phantomania, le spectacle exclusif"> </div>
+    <div class="col">
+      <mdb-icon fas icon="arrow-circle-right " size="1x" class="black-text fleche"> </mdb-icon>
+    </div>
+    <div class="col-sm-6 cirque">
+      <h5>cirque royal</h5>
+    </div>
+
+    <div class="col-sm-3 shopnow">
+      <h4>SHOP NOW</h4>
+    </div>
+  </div>
 </div>
-<div class="col-sm-6 cirque"><h5>cirque royal</h5></div>
+<!--carousel-->
 
-<div class="col-sm-3 shopnow"><h4>SHOP NOW</h4>
-</div>
-</div> 
-</div>
-  <!--carousel-->
- 
-  <div id="demo" class="carousel slide" data-ride="carousel">
+<div id="demo" class="carousel slide" data-ride="carousel">
 
 
-  
-    <!-- The slideshow -->
-    
 
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../assets/img/phantomania-banner.jpg" width="100%" alt="BANNER">
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="phantomania">
-      </div>
+  <!-- The slideshow -->
 
-      
-  
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../assets/img/phantomania-banner.jpg" width="100%" alt="BANNER">
+    </div>
+    <div class="carousel-item">
+      <img src="" alt="phantomania">
+    </div>
+
+
+
     <!-- Left and right controls -->
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -43,29 +47,126 @@
     <a class="carousel-control-next" href="#demo" data-slide="next">
       <span class="carousel-control-next-icon"></span>
     </a>
-  
+
   </div>
 
   <!--bande-->
-<div class="bg">
-  <div class="marge">
-    <div class="row">
-        
+  <div class="bg">
+    <div class="container-fluid">
+      <div class="row">
 
-        
-        <div class="col-6 col-sm-4"><mdb-icon fas icon="shopping-bag" size="1x" class="black-text"> </mdb-icon>
+        <div class="col-3">
+          <mdb-icon fas icon="shopping-bag" size="1x" class="black-text"> </mdb-icon>
           <h6>Un sac gratuit</h6>
-          <p> À l'achat de 50€</p>  
+          <p> À l'achat de 50€, un sac offert ! </p>
+
         </div>
-        <div class="col-6 col-sm-4"><mdb-icon fas icon="tshirt" size="1x" class="black-text"> </mdb-icon>
+
+
+        <div class="col-3">
+          <mdb-icon fas icon="tshirt" size="1x" class="black-text"> </mdb-icon>
           <h6>Collection exclusive</h6>
           <p> Conçu par Loïc Nottet lui-même</p>
         </div>
-        <div class="col-6 col-sm-4"><mdb-icon fas icon="hand-peace" size="1x" class="black-text"> </mdb-icon>
+        <div class="col-3">
+          <mdb-icon fas icon="hand-peace" size="1x" class="black-text"> </mdb-icon>
           <h6>Garantie</h6>
-          <p> 30 jours de garantie pour chaque produits</p>
+          <p> 30 jours de garantie pour chaque produit</p>
         </div>
+      </div>
     </div>
-    </div>
-</div>
+  </div>
 
+  <!--Section: Products v.4-->
+
+
+
+  <!--Grid row-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+
+        <!--Collection card-->
+        <mdb-card class="collection-card z-depth-1-half marge">
+          <!--Card image-->
+          <div class="waves-light" mdbWavesEffect>
+            <mdb-card-img  src="../assets/img/t-shirtfull.png" alt="">
+            </mdb-card-img>
+          </div>
+        </mdb-card>
+      </div>
+      <!--Card image-->
+
+      <!--Collection card-->
+
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-3">
+
+        <!--Collection card-->
+        <mdb-card class="collection-card z-depth-1-half marge">
+          <!--Card image-->
+          <div class="waves-light" mdbWavesEffect>
+          <div style="background-color: black;">
+            <mdb-card-img src="../assets/img/phanto.png" alt="Phantomania, collection de vêtements"> </mdb-card-img>
+           </div>
+          </div>
+          <!--Card image-->
+        </mdb-card>
+        <!--Collection card-->
+
+      </div>
+      <!--Grid column-->
+
+      <!--Fourth column-->
+      <div class="col-3">
+
+        <!--Collection card-->
+        <mdb-card class="collection-card z-depth-1-half marge">
+          <!--Card image-->
+          <div class="waves-light" mdbWavesEffect>
+            <mdb-card-img src="../assets/img/t-shirt.jpg" alt="Acheter t-shirt de Loic Nottet,collection Sillygomania">
+            </mdb-card-img>
+          </div>
+          <!--Card image-->
+        </mdb-card>
+        <!--Collection card-->
+      </div>
+
+      <!--Fourth column-->
+
+    </div>
+  </div>
+
+  
+  <!--Grid row-->
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+
+
+    <!-- The slideshow -->
+  
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/img/phantomania-banner.jpg" width="100%" alt="BANNER">
+      </div>
+      <div class="carousel-item">
+        <img src="" alt="phantomania">
+      </div>
+  
+  
+  
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+  
+    </div>
+  
