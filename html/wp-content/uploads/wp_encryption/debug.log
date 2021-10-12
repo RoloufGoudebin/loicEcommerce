@@ -1,0 +1,19 @@
+<b>5.7.1  SINGLE DOMAIN SSL 0 - http://loicnottet.shop</b>
+Domain covered:
+["loicnottet.shop","www.loicnottet.shop"]
+
+[12-10-2021 12:54:02] :
+No account found, attempting to create account.
+
+[12-10-2021 12:54:04] :
+LEClient finished constructing
+
+[12-10-2021 12:54:04] :
+No order found for 'loicnottet.shop'. Creating new order.
+
+[12-10-2021 12:54:06] :
+Created order for 'loicnottet.shop'.
+
+Offering manual verification procedure. 
+
+HTTP challenge file checked locally - found invalid

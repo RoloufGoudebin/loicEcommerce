@@ -1,0 +1,6 @@
+2021-10-12T12:32:17+00:00 CRITICAL Maximum execution time of 30 seconds exceeded dans /var/www/html/wp-includes/class-wp-image-editor-imagick.php à la ligne 778
+
+2021-10-12T12:33:51+00:00 CRITICAL Maximum execution time of 30 seconds exceeded dans /var/www/html/wp-includes/class-wp-image-editor-imagick.php à la ligne 778
+
+2021-10-12T12:38:16+00:00 CRITICAL Maximum execution time of 30 seconds exceeded dans /var/www/html/wp-includes/class-wp-image-editor-imagick.php à la ligne 778
+

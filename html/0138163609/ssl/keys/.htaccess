@@ -1,0 +1,12 @@
+
+# BEGIN Really Simple SSL LETS ENCRYPT
+# Les directives (lignes) entre « BEGIN Really Simple SSL LETS ENCRYPT » et « END Really Simple SSL LETS ENCRYPT » sont générées
+# dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.
+# Toute modification des directives situées entre ces marqueurs sera outrepassée.
+<ifModule mod_authz_core.c>
+    Require all denied
+</ifModule>
+<ifModule !mod_authz_core.c>
+    Deny from all
+</ifModule>
+# END Really Simple SSL LETS ENCRYPT
